@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.example.com/students"
+        xmlns:tns="http://www.example.com/students"
+        elementFormDefault="qualified">
+    <complexType name="Gems">
+        <sequence>
+            <element name="gem" type="tns:Gem" minOccurs="16" maxOccurs="unbounded"/>
+        </sequence>
+    </complexType>
+    <complexType name="Gem">
+        <sequence>
+            <element name="preciousness" type="tns:Preciousness"/>
+            <element name="origin" type="string"/>
+            <element name="cuttingDate" type="date"/>
+            <element name="visualParameters" type="tns:VisualParameters"/>
+        </sequence>
+        <attribute name="id" type="ID" use="required"/>
+        <attribute name="name" type="string" use="required"/>
+        <attribute name="value" type="int" />
+    </complexType>
+    <simpleType name="Preciousness">
+        <restriction base="string">
+            <enumeration value="gemstone"/>
+            <enumeration value="semiprecious"/>
+        </restriction>
+    </simpleType>
+    <complexType name="VisualParameters">
+        <sequence>
+            <element name="color">
+                <simpleType>
+                    <restriction base="string">
+                        <enumeration value="colorless"/>
+                        <enumeration value="red"/>
+                        <enumeration value="blue"/>
+                        <enumeration value="green"/>
+                        <enumeration value="violet"/>
+                        <enumeration value="orange"/>
+                        <enumeration value="grey"/>
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="clarity">
+                <simpleType>
+                    <restriction base="int">
+                        <minInclusive value="0"/>
+                        <maxInclusive value="100"/>
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="facets">
+                <simpleType>
+                    <restriction base="int">
+                        <minInclusive value="4"/>
+                        <maxInclusive value="57"/>
+                    </restriction>
+                </simpleType>
+            </element>
+        </sequence>
+    </complexType>
+</schema>
