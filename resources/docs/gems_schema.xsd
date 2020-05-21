@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <schema xmlns="http://www.w3.org/2001/XMLSchema"
-        targetNamespace="http://www.example.com/students"
-        xmlns:tns="http://www.example.com/students"
+        targetNamespace="http://gradomski/gems"
+        xmlns:tns="http://gradomski/gems"
         elementFormDefault="qualified">
-    <complexType name="Gems">
+    <complexType name="gems">
         <sequence>
             <element name="gem" type="tns:Gem" minOccurs="16" maxOccurs="unbounded"/>
         </sequence>

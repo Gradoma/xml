@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<Gems xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:noNamespaceSchemaLocation="gems_schema.xsd">
+<gems xmlns="http://gradomski/gems"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi.schemalocation:="http://www.w3.org/2001/XMLSchema ge">
     <gem id="1" name="Diamond" value="15">
         <preciousness>gemstone</preciousness>
         <origin>Argentina</origin>
@@ -171,4 +172,4 @@
             <facets>22</facets>
         </visualParameters>
     </gem>
-</Gems>
+</gems>
