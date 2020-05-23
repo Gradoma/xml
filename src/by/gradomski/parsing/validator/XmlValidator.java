@@ -4,6 +4,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.xml.sax.SAXException;
 
+import javax.xml.transform.Source;
 import javax.xml.transform.stream.StreamSource;
 import javax.xml.validation.Schema;
 import javax.xml.validation.SchemaFactory;
@@ -14,22 +15,19 @@ import java.io.IOException;
 public class XmlValidator {
     private static Logger logger = LogManager.getLogger();
 
-    public boolean validateXmlFile(String xmlPath, String xsdPath){
+    public boolean validateXmlFile(String xmlPath){
         File xmlFile = new File(xmlPath);
         if(!xmlFile.exists()){
             logger.error("XML file not found");
             return false;
         }
-        File xsdFile = new File(xsdPath);
-        if(!xsdFile.exists()){
-            logger.error("XSD file not found");
-            return false;
-        }
-        SchemaFactory factory = SchemaFactory.newInstance("http://www.w3.org/2001/XMLSchema");
+        String language = "http://www.w3.org/2001/XMLSchema";
+        SchemaFactory factory = SchemaFactory.newInstance(language);
         try {
-            Schema schema = factory.newSchema(xsdFile);
+            Schema schema = factory.newSchema();
             Validator validator = schema.newValidator();
-            validator.validate(new StreamSource(xmlPath));
+            Source source = new StreamSource(xmlPath);
+            validator.validate(source);
             logger.info("Validation correct");
             return true;
         } catch (SAXException e) {

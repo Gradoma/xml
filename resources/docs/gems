@@ -1,175 +1,175 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<gems xmlns="http://gradomski/gems"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi.schemalocation:="http://www.w3.org/2001/XMLSchema ge">
-    <gem id="1" name="Diamond" value="15">
+<gems xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns="http://gradomski/gems"
+      xsi:schemaLocation="http://gradomski/gems gems_schema.xsd">
+    <gem id="Di1" name="Diamond" value="15">
         <preciousness>gemstone</preciousness>
         <origin>Argentina</origin>
-        <cuttingDate>15-10-2003</cuttingDate>
-        <visualParameters>
+        <cutting-date>2003-10-15</cutting-date>
+        <visual-parameters>
             <color>colorless</color>
             <clarity>90</clarity>
             <facets>57</facets>
-        </visualParameters>
+        </visual-parameters>
     </gem>
-    <gem id="2" name="Ruby" value="30">
+    <gem id="Rb2" value="30" name="Ruby">
         <preciousness>gemstone</preciousness>
         <origin>Africa</origin>
-        <cuttingDate>17-02-1984</cuttingDate>
-        <visualParameters>
+        <cutting-date>1984-02-17</cutting-date>
+        <visual-parameters>
             <color>red</color>
             <clarity>40</clarity>
             <facets>12</facets>
-        </visualParameters>
+        </visual-parameters>
     </gem>
-    <gem id="3" name="Sapphire" value="24">
+    <gem id="Sp3" name="Sapphire" >
         <preciousness>gemstone</preciousness>
         <origin>India</origin>
-        <cuttingDate>04-12-2007</cuttingDate>
-        <visualParameters>
+        <cutting-date>2007-04-12</cutting-date>
+        <visual-parameters>
             <color>blue</color>
             <clarity>65</clarity>
             <facets>25</facets>
-        </visualParameters>
+        </visual-parameters>
     </gem>
-    <gem id="4" name="Amethyst" value="12">
+    <gem id="Am4" name="Amethyst" value="12">
         <preciousness>semiprecious</preciousness>
         <origin>Russia</origin>
-        <cuttingDate>04-04-1973</cuttingDate>
-        <visualParameters>
+        <cutting-date>1973-04-04</cutting-date>
+        <visual-parameters>
             <color>violet</color>
             <clarity>80</clarity>
             <facets>17</facets>
-        </visualParameters>
+        </visual-parameters>
     </gem>
-    <gem id="5" name="Emerald" value="9">
+    <gem id="Em5" name="Emerald" value="9">
         <preciousness>gemstone</preciousness>
         <origin>Brazil</origin>
-        <cuttingDate>23-06-1994</cuttingDate>
-        <visualParameters>
+        <cutting-date>1994-06-24</cutting-date>
+        <visual-parameters>
             <color>green</color>
             <clarity>12</clarity>
             <facets>4</facets>
-        </visualParameters>
+        </visual-parameters>
     </gem>
-    <gem id="6" name="Opal" value="22">
+    <gem id="Op6" name="Opal" value="22">
         <preciousness>semiprecious</preciousness>
         <origin>Mexico</origin>
-        <cuttingDate>14-03-2012</cuttingDate>
-        <visualParameters>
+        <cutting-date>2012-03-14</cutting-date>
+        <visual-parameters>
             <color>blue</color>
             <clarity>53</clarity>
             <facets>17</facets>
-        </visualParameters>
+        </visual-parameters>
     </gem>
-    <gem id="7" name="Topaz" value="11">
+    <gem id="Tp7" name="Topaz" value="11">
         <preciousness>semiprecious</preciousness>
         <origin>Brazil</origin>
-        <cuttingDate>27-01-1968</cuttingDate>
-        <visualParameters>
+        <cutting-date>1968-01-27</cutting-date>
+        <visual-parameters>
             <color>grey</color>
             <clarity>9</clarity>
             <facets>7</facets>
-        </visualParameters>
+        </visual-parameters>
     </gem>
-    <gem id="8" name="Rhinestone" value="43">
+    <gem id="Rh8" name="Rhinestone" value="43">
         <preciousness>semiprecious</preciousness>
         <origin>Russia</origin>
-        <cuttingDate>06-07-1982</cuttingDate>
-        <visualParameters>
+        <cutting-date>1982-07-12</cutting-date>
+        <visual-parameters>
             <color>colorless</color>
             <clarity>73</clarity>
             <facets>13</facets>
-        </visualParameters>
+        </visual-parameters>
     </gem>
-    <gem id="9" name="Aquamarine" value="14">
+    <gem id="Aq9" name="Aquamarine" value="14">
         <preciousness>semiprecious</preciousness>
         <origin>Russia</origin>
-        <cuttingDate>11-04-2009</cuttingDate>
-        <visualParameters>
+        <cutting-date>2009-04-11</cutting-date>
+        <visual-parameters>
             <color>blue</color>
             <clarity>55</clarity>
             <facets>17</facets>
-        </visualParameters>
+        </visual-parameters>
     </gem>
-    <gem id="10" name="Garnet" value="9">
+    <gem id="Gr10" name="Garnet" value="9">
         <preciousness>semiprecious</preciousness>
         <origin>India</origin>
-        <cuttingDate>21-09-1995</cuttingDate>
-        <visualParameters>
+        <cutting-date>1995-09-22</cutting-date>
+        <visual-parameters>
             <color>red</color>
             <clarity>13</clarity>
             <facets>9</facets>
-        </visualParameters>
+        </visual-parameters>
     </gem>
-    <gem id="11" name="Emerald" value="16">
+    <gem id="Em11" name="Emerald" value="16">
         <preciousness>gemstone</preciousness>
         <origin>Africa</origin>
-        <cuttingDate>07-12-2001</cuttingDate>
-        <visualParameters>
+        <cutting-date>2001-12-07</cutting-date>
+        <visual-parameters>
             <color>green</color>
             <clarity>17</clarity>
             <facets>22</facets>
-        </visualParameters>
+        </visual-parameters>
     </gem>
-    <gem id="12" name="Diamond" value="18">
+    <gem id="Di12" name="Diamond" value="18">
         <preciousness>gemstone</preciousness>
         <origin>Russia</origin>
-        <cuttingDate>21-09-1995</cuttingDate>
-        <visualParameters>
+        <cutting-date>1995-05-29</cutting-date>
+        <visual-parameters>
             <color>colorless</color>
             <clarity>88</clarity>
             <facets>33</facets>
-        </visualParameters>
+        </visual-parameters>
     </gem>
-    <gem id="13" name="Opal" value="9">
+    <gem id="Op13" name="Opal" value="9">
         <preciousness>semiprecious</preciousness>
         <origin>Australia</origin>
-        <cuttingDate>09-06-1998</cuttingDate>
-        <visualParameters>
+        <cutting-date>1998-08-06</cutting-date>
+        <visual-parameters>
             <color>orange</color>
             <clarity>24</clarity>
             <facets>11</facets>
-        </visualParameters>
+        </visual-parameters>
     </gem>
-    <gem id="14" name="Ruby" value="26">
+    <gem id="Rb14" value="26" name="Ruby">
         <preciousness>gemstone</preciousness>
         <origin>India</origin>
-        <cuttingDate>17-06-2014</cuttingDate>
-        <visualParameters>
+        <cutting-date>2004-06-17</cutting-date>
+        <visual-parameters>
             <color>red</color>
             <clarity>37</clarity>
             <facets>17</facets>
-        </visualParameters>
+        </visual-parameters>
     </gem>
-    <gem id="15" name="Diamond" value="24">
+    <gem id="Di15" name="Diamond" value="24">
         <preciousness>gemstone</preciousness>
         <origin>Africa</origin>
-        <cuttingDate>01-11-1975</cuttingDate>
-        <visualParameters>
+        <cutting-date>1975-11-01</cutting-date>
+        <visual-parameters>
             <color>colorless</color>
             <clarity>84</clarity>
             <facets>24</facets>
-        </visualParameters>
+        </visual-parameters>
     </gem>
-    <gem id="16" name="Sapphire" value="16">
+    <gem id="Sp16" name="Sapphire" value="16">
         <preciousness>gemstone</preciousness>
         <origin>Australia</origin>
-        <cuttingDate>03-05-1998</cuttingDate>
-        <visualParameters>
+        <cutting-date>1998-05-03</cutting-date>
+        <visual-parameters>
             <color>blue</color>
             <clarity>56</clarity>
             <facets>17</facets>
-        </visualParameters>
+        </visual-parameters>
     </gem>
-    <gem id="17" name="Amethyst" value="19">
+    <gem id="Am17" name="Amethyst" value="19">
         <preciousness>semiprecious</preciousness>
         <origin>Argentina</origin>
-        <cuttingDate>07-10-2011</cuttingDate>
-        <visualParameters>
+        <cutting-date>2011-07-11</cutting-date>
+        <visual-parameters>
             <color>violet</color>
             <clarity>62</clarity>
             <facets>22</facets>
-        </visualParameters>
+        </visual-parameters>
     </gem>
 </gems>

@@ -3,26 +3,33 @@
         targetNamespace="http://gradomski/gems"
         xmlns:tns="http://gradomski/gems"
         elementFormDefault="qualified">
-    <complexType name="gems">
-        <sequence>
-            <element name="gem" type="tns:Gem" minOccurs="16" maxOccurs="unbounded"/>
-        </sequence>
-    </complexType>
+    <element name="gems">
+        <complexType>
+            <sequence>
+                <element name="gem" type="tns:Gem" minOccurs="16" maxOccurs="unbounded"/>
+            </sequence>
+        </complexType>
+    </element>
     <complexType name="Gem">
         <sequence>
             <element name="preciousness" type="tns:Preciousness"/>
-            <element name="origin" type="string"/>
-            <element name="cuttingDate" type="date"/>
-            <element name="visualParameters" type="tns:VisualParameters"/>
+            <element name="origin" type="tns:Origin"/>
+            <element name="cutting-date" type="date"/>
+            <element name="visual-parameters" type="tns:VisualParameters"/>
         </sequence>
-        <attribute name="id" type="ID" use="required"/>
+        <attribute name="id" type="tns:ID" use="required"/>
         <attribute name="name" type="string" use="required"/>
-        <attribute name="value" type="int" />
+        <attribute name="value" type="int" default="0"/>
     </complexType>
     <simpleType name="Preciousness">
         <restriction base="string">
             <enumeration value="gemstone"/>
             <enumeration value="semiprecious"/>
+        </restriction>
+    </simpleType>
+    <simpleType name="Origin">
+        <restriction base="string">
+            <pattern value="\D{3,15}"/>
         </restriction>
     </simpleType>
     <complexType name="VisualParameters">
@@ -58,4 +65,9 @@
             </element>
         </sequence>
     </complexType>
+    <simpleType name="ID">
+        <restriction base="ID">
+            <pattern value="\D{2}\d+"/>
+        </restriction>
+    </simpleType>
 </schema>
