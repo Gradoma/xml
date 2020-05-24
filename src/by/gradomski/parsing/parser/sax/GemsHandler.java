@@ -79,7 +79,6 @@ public class GemsHandler extends DefaultHandler {
                 case CUTTING_DATE:
                     try {
                         Date date = DATE_FORMAT.parse(text);
-                        logger.info("date = " + date);
                         currentGem.setCuttingDate(date);
                     } catch (ParseException e) {
                         logger.error("date parsing: ParseException");
