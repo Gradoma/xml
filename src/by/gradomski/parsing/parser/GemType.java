@@ -33,7 +33,7 @@ public enum GemType {
         GemType[] gemTypes = GemType.values();
         Optional<GemType> optionalGemType = Arrays.stream(gemTypes).filter(g -> g.getValue().equals(value)).findFirst();
         if (optionalGemType.isEmpty()){
-            throw new IncorrectGemTypeException("type not present in GemType enum");
+            throw new IncorrectGemTypeException(value + " type not present in GemType enum");
         }
         return optionalGemType.get();
     }
