@@ -22,7 +22,7 @@ public class GemsHandler extends DefaultHandler {
     private Set<Gem> gemSet;
     private GemType currentType;
     private Gem currentGem;
-    private final SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("YYYY-MM-DD");
+    private final SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("yyyy-MM-dd");
 
     public GemsHandler(){
         gemSet = new LinkedHashSet<Gem>();

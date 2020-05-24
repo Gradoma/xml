@@ -5,7 +5,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Gem {
-    private static final SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("YYYY-MM-DD");
+    private static final SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("yyyy-MM-dd");
     private String id;
     private String name;
     private int value;
@@ -120,8 +120,8 @@ public class Gem {
         builder.append(preciousness);
         builder.append(", ");
         builder.append("cutting date=");
-//        builder.append(DATE_FORMAT.format(cuttingDate));
-        builder.append(cuttingDate);
+        builder.append(DATE_FORMAT.format(cuttingDate));
+//        builder.append(cuttingDate);
         builder.append(", ");
         builder.append("visual parameters=");
         builder.append(visualParameters.toString());
