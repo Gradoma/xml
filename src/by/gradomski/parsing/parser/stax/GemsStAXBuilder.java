@@ -6,7 +6,6 @@ import by.gradomski.parsing.exception.IncorrectGemTypeException;
 import by.gradomski.parsing.parser.GemType;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.xml.sax.XMLReader;
 
 import javax.xml.stream.XMLInputFactory;
 import javax.xml.stream.XMLStreamConstants;
@@ -35,7 +34,7 @@ public class GemsStAXBuilder {
     }
 
     public void buildSetGems(String fileName){
-        XMLStreamReader reader = null;
+        XMLStreamReader reader;
         String elementName;
         try (FileInputStream inputStream = new FileInputStream(fileName)){
             reader = factory.createXMLStreamReader(inputStream);

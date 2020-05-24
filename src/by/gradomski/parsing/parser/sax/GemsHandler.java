@@ -7,13 +7,11 @@ import by.gradomski.parsing.parser.GemType;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.xml.sax.Attributes;
-import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
@@ -33,7 +31,7 @@ public class GemsHandler extends DefaultHandler {
     }
 
     @Override
-    public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
+    public void startElement(String uri, String localName, String qName, Attributes attributes){
         logger.debug("qName = " + qName);
         if ("gem".equals(qName)){
             currentGem = new Gem();
@@ -66,7 +64,7 @@ public class GemsHandler extends DefaultHandler {
     }
 
     @Override
-    public void characters(char[] ch, int start, int length) throws SAXException {
+    public void characters(char[] ch, int start, int length){
         String text = new String(ch, start, length).trim();
         if (currentType != null){
             switch (currentType) {
@@ -104,7 +102,7 @@ public class GemsHandler extends DefaultHandler {
     }
 
     @Override
-    public void endElement(String uri, String localName, String qName) throws SAXException {
+    public void endElement(String uri, String localName, String qName){
         if("gem".equals(qName)){
             gemSet.add(currentGem);
             logger.debug("end Element, element added");

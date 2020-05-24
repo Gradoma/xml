@@ -2,7 +2,6 @@ package by.gradomski.parsing.parser.sax;
 
 import by.gradomski.parsing.entity.Gem;
 import org.xml.sax.SAXException;
-import org.xml.sax.XMLReader;
 
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;

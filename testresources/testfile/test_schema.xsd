@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://gradomski/test"
+        xmlns:tns="http://gradomski/test"
+        elementFormDefault="qualified">
+    <element name="gems">
+        <complexType>
+            <sequence>
+                <element name="gem" type="tns:Gem" minOccurs="1" maxOccurs="unbounded"/>
+            </sequence>
+        </complexType>
+    </element>
+    <complexType name="Gem">
+        <sequence>
+            <element name="preciousness" type="tns:Preciousness"/>
+            <element name="origin" type="tns:Origin"/>
+            <element name="cutting-date" type="date"/>
+            <element name="visual-parameters" type="tns:VisualParameters"/>
+        </sequence>
+        <attribute name="id" type="tns:ID" use="required"/>
+        <attribute name="name" type="string" use="required"/>
+        <attribute name="value" type="int" default="0"/>
+    </complexType>
+    <simpleType name="Preciousness">
+        <restriction base="string">
+            <enumeration value="gemstone"/>
+            <enumeration value="semiprecious"/>
+        </restriction>
+    </simpleType>
+    <simpleType name="Origin">
+        <restriction base="string">
+            <pattern value="\D{3,15}"/>
+        </restriction>
+    </simpleType>
+    <complexType name="VisualParameters">
+        <sequence>
+            <element name="color">
+                <simpleType>
+                    <restriction base="string">
+                        <enumeration value="colorless"/>
+                        <enumeration value="red"/>
+                        <enumeration value="blue"/>
+                        <enumeration value="green"/>
+                        <enumeration value="violet"/>
+                        <enumeration value="orange"/>
+                        <enumeration value="grey"/>
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="clarity">
+                <simpleType>
+                    <restriction base="int">
+                        <minInclusive value="0"/>
+                        <maxInclusive value="100"/>
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="facets">
+                <simpleType>
+                    <restriction base="int">
+                        <minInclusive value="4"/>
+                        <maxInclusive value="57"/>
+                    </restriction>
+                </simpleType>
+            </element>
+        </sequence>
+    </complexType>
+    <simpleType name="ID">
+        <restriction base="ID">
+            <pattern value="\D{2}\d+"/>
+        </restriction>
+    </simpleType>
+</schema>

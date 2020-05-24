@@ -31,7 +31,7 @@ public class XmlValidator {
             logger.info("Validation correct");
             return true;
         } catch (SAXException e) {
-            logger.fatal("IOException");
+            logger.fatal("SAXException");
             e.printStackTrace();
             return false;
         } catch (IOException eIO){

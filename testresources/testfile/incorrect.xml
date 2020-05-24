@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<gems xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns="http://gradomski/test"
+      xsi:schemaLocation="http://gradomski/test test_schema.xsd">
+    <gem id="1">
+        <preciousness>test</preciousness>
+        <origin>5484132</origin>
+        <cutting-date>2003</cutting-date>
+
+    </gem>
+</gems>

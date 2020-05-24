@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<gems xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns="http://gradomski/test"
+      xsi:schemaLocation="http://gradomski/test test_schema.xsd">
+    <gem id="Di1" name="Diamond" value="15">
+        <preciousness>gemstone</preciousness>
+        <origin>Argentina</origin>
+        <cutting-date>2003-10-15</cutting-date>
+        <visual-parameters>
+            <color>colorless</color>
+            <clarity>90</clarity>
+            <facets>57</facets>
+        </visual-parameters>
+    </gem>
+</gems>

@@ -1,10 +1,13 @@
 package by.gradomski.parsing.entity;
 
-import java.text.DateFormat;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Gem {
+    private static Logger logger = LogManager.getLogger();
     private static final SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("yyyy-MM-dd");
     private String id;
     private String name;
@@ -79,13 +82,43 @@ public class Gem {
 
         Gem gem = (Gem) o;
 
-        if (value != gem.value) return false;
-        if (id != null ? !id.equals(gem.id) : gem.id != null) return false;
-        if (name != null ? !name.equals(gem.name) : gem.name != null) return false;
-        if (preciousness != null ? !preciousness.equals(gem.preciousness) : gem.preciousness != null) return false;
-        if (origin != null ? !origin.equals(gem.origin) : gem.origin != null) return false;
-        if (cuttingDate != null ? !cuttingDate.equals(gem.cuttingDate) : gem.cuttingDate != null) return false;
-        return visualParameters != null ? visualParameters.equals(gem.visualParameters) : gem.visualParameters == null;
+        if (value != gem.value) {
+            System.out.println("val");
+            return false;
+        }
+        if(!id.equals(gem.id)) {
+            logger.error("id");
+            System.out.println("id");
+            return false;
+        }
+        if(!name.equals(gem.name)) {
+            logger.error("name");
+            System.out.println("name");
+            return false;
+        }
+        if(!preciousness.equals(gem.preciousness)) {
+            logger.error("preci");
+            System.out.println("preci");
+            return false;
+        }
+        if(!origin.equals(gem.origin)) {
+            logger.error("origin");
+            System.out.println("origin");
+            return false;
+        }
+        if(!cuttingDate.equals(gem.cuttingDate)) {
+            logger.error("cut, this=" + cuttingDate + ", gem.cut=" + gem.cuttingDate);
+            System.out.println("cut");
+            return false;
+        }
+
+        if (visualParameters == null){
+            logger.error("visualParameters == null");
+            System.out.println("vis = null");
+            return (gem.visualParameters == null);
+        } else {
+            return visualParameters.equals(gem.visualParameters);
+        }
     }
 
     @Override
@@ -121,7 +154,6 @@ public class Gem {
         builder.append(", ");
         builder.append("cutting date=");
         builder.append(DATE_FORMAT.format(cuttingDate));
-//        builder.append(cuttingDate);
         builder.append(", ");
         builder.append("visual parameters=");
         builder.append(visualParameters.toString());
